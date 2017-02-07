@@ -37,7 +37,7 @@ $.fn.dragging = function (options) {
         var tarPos = that.position(); //鼠标按下时目标元素的位置
         //鼠标移动时
         $(document).mousemove(function (e) {
-            e.preventDefault();
+            e.preventDefault();//阻止浏览器的默认事件，防止在拖动的过程中触发浏览器的拖动事件
             var mMovex = e.pageX, mMovey = e.pageY;//鼠标移动时坐标
 
             var movex = mMovex - mDownx + tarPos.left;//移动后的left值
